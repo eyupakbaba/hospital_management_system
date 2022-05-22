@@ -17,7 +17,7 @@
 		<h4 class="text-white">HOSPITAL MANAGEMENT SYSTEM</h4>
 
 		<div class="navbar-nav"></div>
-
+		
 		<ul class="navbar-nav">
 			<li class="nav-item"><a href="#" class="nav-link text-white">Admin</a></li>
 			<li class="nav-item"><a href="#" class="nav-link text-white">Doctor</a></li>
