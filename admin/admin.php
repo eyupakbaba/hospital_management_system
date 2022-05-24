@@ -86,7 +86,77 @@
                                 ?>
 
                             </div>
-                
+                            <div class=col-md-6>
+
+                                <?php
+
+                                if(isset($_POST['add'])){
+                                    
+                                    $uname = $_POST['uname'];
+                                    $pass = $_POST['pass'];
+                                    $image = $_FILES['img']['name'];
+
+                                    $error = array();
+                                    
+                                    if(empty($uname)){  
+                                        $error['u'] = "Enter Admin Username";
+                                    }
+                                    else if(empty($pass)){
+                                        $error['u'] = "Enter Admin Password";
+                                    }
+                                    else if(empty($image)){
+                                        $error['u'] = "Add a Profile Picture";
+                                    }
+
+                                    if (count($error) == 0 ){
+
+                                        $q = "INSERT INTO admin(username,password,profile) VALUES('$uname','$pass','$image')";
+
+                                        $result = mysqli_query($connect,$q);
+
+                                        if($result){
+
+                                            move_uploaded_file($_FILES['img']['tmp_name'],"img/$image");
+                                        }
+                                        else{
+
+                                        }
+                                    }
+                                }
+                                if(isset($error['u'])){
+                                    $er = $error['u'];
+
+                                    $show = "<h5 class='text-center alert alert-danger'>$er</h5>";
+                                }
+                                else{
+                                    $show = "";
+                                }
+
+                                ?>
+                                <h5 class="text-center">Add Admin</h5>
+
+                                <form method="post" enctype="multipart/form-data">
+                                    <div>
+                                        <?php
+                                            echo $show;
+                                        ?>
+                                    </div>
+                                    <div class="from-group">
+                                        <label for="">Username</label>
+                                        <input type="text" name="uname" class="form-control" autocomplete="off">
+                                    </div>
+                                    <div class="from-group">
+                                        <label for="">Password</label>
+                                        <input type="password" name="pass" class="form-control">
+                                    </div>
+                                    <div class="from-group">
+                                    
+                                        <td><input type="file" name="img" class="form-control" style="margin-top:10px;"></td>
+                                        
+                                    </div>
+                                    <input type="submit" name="add" value="Add New Admin" class="btn btn-success" style="margin-top:10px;">
+                                </form>
+                            </div>
                         </div>
                     </div>        
                 </div>
