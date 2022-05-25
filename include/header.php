@@ -8,18 +8,20 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-	
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
 	
 	<nav class="navbar navbar-expand-lg navbar-info bg-info">
 		<h4 class="text-white">HOSPITAL MANAGEMENT SYSTEM</h4>
 
-		<div class="navbar-nav"></div>
+		<div class="mr-auto" sytle="margin-left:auto;"></div>
 		
 		<ul class="navbar-nav">
-			<li class="nav-item"><a href="#" class="nav-link text-white">Admin</a></li>
+
+			<li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">Admin</a></li>
 			<li class="nav-item"><a href="#" class="nav-link text-white">Doctor</a></li>
 			<li class="nav-item"><a href="#" class="nav-link text-white">Patient</a></li>
 		</ul>
