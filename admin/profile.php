@@ -165,11 +165,67 @@
                                             $row = mysqli_fetch_array($old);
                                             $pass = $row[2];
                                             
-                                      
+                                            if (empty($old_pass)) {
+                                                $error['p'] = "Enter old password";
+                                                
+                                            }else if (empty($new_pass)) {
+                                                $error['p'] = "Enter new password";
+                                                
+                                            }else if (empty($con_pass)) {
+                                                $error['p'] = "Enter confirm password";
+                                                
+                                            }else if($old_pass != $pass) {
+                                                $error['p'] = "Invalid Old password";
+                                                
+                                            }else if($new_pass != $con_pass) {
+                                                $error['p'] = "Both password does not match";
+                                            }
+                                            else {
+
+                                                $query = "UPDATE admin SET password='$new_pass' WHERE username='$ad'";
+                                                
+                                                mysqli_query($connect,$query);
+                                            }
+                                            
+
+                                            if (isset($error['p'])){
+
+                                                $e = $error['p'];
+                                                $show ="<h5 class='text-center alert alert-danger'>$e</h5>";
+                                                // code...
+                                            }else{
+                                                $show = " ";
+                                            } 
                                         }
                                      ?>
-                                </form>
-                                  
+                                    </form>
+                                    <form method="post" class="col-md-6">
+                                        <h5 class="text-center my-4"> Change Password</h5>
+                                            <div>
+                                                <?php 
+                                                    if (isset($show)){
+                                                        
+                                                            echo $show ;
+                                                    }
+                                                ?>
+                                            </div>
+                                        <div class="form-group">
+                                            <label> Old Password</label>
+                                            <input type="password"  name="old_pass" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label> New Password</label>
+                                            <input type="password"  name="new_pass" class="form-control">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label> Confirm Password</label>
+                                            <input type="password"  name="con_pass" class="form-control">
+                                        </div>
+                                        
+                                        <input type="submit" name="update_pass" value="Update Password" class="btn btn-info">
+                                    </form>
 
                                     
                                 
