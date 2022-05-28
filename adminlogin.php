@@ -51,8 +51,7 @@ if (isset($_POST['login'])) {
 	<title>Admin Login Page</title>
 </head>
 
-<body style="background-image: url(pictures/hospital.png); background-repeat: no-repeat; background-size: cover;">
-
+<body style="background-image: url(images/hospital.png); background-repeat: no-repeat; background-size: cover;">
 
 	<?php 
 
@@ -67,7 +66,7 @@ if (isset($_POST['login'])) {
 	 		<div class="row">
 	 			<div class="col-md-3"></div>
 	 			<div class="col-md-6 jumbotron">
-	 				<img src="pictures/admin7.png" height="300" style="margin-left: 150px;" class="col-md-6" >
+	 				<img src="images/admin7.png" height="300" style="margin-left: 150px;" class="col-md-6" >
 	 				<form method="post" class="my-3">
 
 	 					<div class="alert alert-danger">
