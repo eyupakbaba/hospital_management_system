@@ -30,7 +30,9 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            
+
+
+            show();
             function show(){
                 $.ajax({
                     
@@ -42,6 +44,12 @@
                     }
                 });
             }
+
+            $(document).on('click','.approve',function(){
+                var id = $(this).attr("id");
+                
+
+            });
         });
     </script>
 </body>
