@@ -39,6 +39,17 @@
 					<li class="nav-item"><a href="logout.php" class="nav-link text-white">log out</a></li>
 					';
 
+				} 
+
+
+				else if(isset($_SESSION['doctor'])){
+					$user = $_SESSION['doctor']	;
+					
+					echo '
+					<li class="nav-item"><a href="#" class="nav-link text-white">'.$user.'</a></li>
+					<li class="nav-item"><a href="logout.php" class="nav-link text-white">log out</a></li>
+					';
+					
 				}
 				else{
 					echo '
