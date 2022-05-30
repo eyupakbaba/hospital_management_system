@@ -16,7 +16,7 @@
                 <th>Firstname</th>
                 <th>Surname</th>
                 <th>Username</th>
-                <th>Email</th>
+                
                 <th>Gender</th>
                 <th>Phone/th>
                 <th>Country</th>
@@ -48,7 +48,7 @@
                 <td>".$row['firstname']."</td>
                 <td>".$row['surname']."</td>
                 <td>".$row['username']."</td>
-                <td>".$row['email']."</td>
+                
                 <td>".$row['gender']."</td>
                 <td>".$row['phone']."</td>
                 <td>".$row['country']."</td>
