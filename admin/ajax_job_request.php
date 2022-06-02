@@ -28,7 +28,7 @@
     
     ";
 
-    if(mysqli_num_rows($res) < ){
+    if(mysqli_num_rows($res) < 1 ) {
 
         $output .= "
         
@@ -57,10 +57,10 @@
                     <div class='col-md-12'>
                         <div class='row'>
                             <div class='col-md-6'>
-                                <button id='".$row['id']."' class=''btn btn-success approve>Approve</button>
+                                <button id='".$row['id']."' class='btn btn-success approve'>Approve</button>
                             </div>
                             <div class='col-md-6'>
-                                <button id='".$row['id']."' class=''btn btn-danger rejected>Rejected</button>
+                                <button id='".$row['id']."' class='btn btn-danger reject'>Reject</button>
                             </div>
                         </div>
                     </div>
@@ -70,11 +70,12 @@
         ";
     }
 
-    $output .= "
-    
+    $output .="
+
         </tr>
         </table>
     ";
 
+    echo $output;
 
 ?>
