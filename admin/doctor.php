@@ -4,7 +4,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     
     <title>Total Doctors</title>
@@ -49,7 +49,7 @@
                                         <th>Username</th>
                                         
                                         <th>Gender</th>
-                                        <th>Phone/th>
+                                        <th>Phone</th>
                                         <th>Country</th>
                                         <th>Salary</th>
                                         <th>Date Registered</th>
@@ -87,7 +87,7 @@
                                         <td>".$row['salary']."</td>
                                         <td>".$row['data_reg']."</td>
                                         <td>
-                                            <a href='edit.php?id = ".$row['id']."'>
+                                            <a href='edit.php?id=".$row['id']."'>
                                                 <button class = 'btn btn-info'>Edit</button>
                                             </a>
                                         </td>

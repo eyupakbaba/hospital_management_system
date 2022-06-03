@@ -1,5 +1,7 @@
 <?php
 
+	session_start();
+
 	include("include/connection.php");
 
 	if (isset($_POST['login'])){
@@ -28,15 +30,18 @@
 		}
 
 		if(count($error) == 0 ){
+
 			$query = "SELECT * FROM doctors WHERE username='$uname' AND password='$password'";
 
 			$res = mysqli_query($connect,$query);
 
 			if(mysqli_num_rows($res)){
-				echo "<script>alert('done')</script>";
-				$_SESSION['doctor'] = $uname;
 
-				//header("Location:")
+				echo "<script>alert('done')</script>";
+				$_SESSION['doctor'] = $uname; 
+
+				header("Location:doctor/index.php");
+
 			}else {
 				echo "<script>alert('Invalid Account')</script>";
 			}
