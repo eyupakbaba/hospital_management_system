@@ -80,7 +80,7 @@
                             <form method="post">
                                 <label>Enter Doctor's Salary</label>
                                 <input type="number" name="salary" class="form-control" autocomplete="off" placeholder="Enter Doctor's Salary" value="<?php echo $row['salary']; ?>">
-                                <input type="submit" name="Update" class="btn btn-info my-3" value="Update Salary">
+                                <input type="submit" name="update" class="btn btn-info my-3" value="Update Salary">
                             </form>
                         </div>
                         

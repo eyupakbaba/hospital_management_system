@@ -39,7 +39,7 @@
                                         </div>
                                     </div>   
                                 </div>
-                                <div class="col-md-3 my-2 bg-info" style="height: 150px;">
+                                <div class="col-md-3 my-2 bg-warning mx-2" style="height: 150px;">
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-8">
@@ -54,7 +54,7 @@
                                         </div>
                                     </div>   
                                 </div>
-                                <div class="col-md-3 my-2 bg-info" style="height: 150px;">
+                                <div class="col-md-3 my-2 bg-success mx-2" style="height: 150px;">
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-8">
@@ -63,7 +63,7 @@
                                                 <h5 class="text-white my-4">Appointment</h5>
                                             </div>
                                             <div class="col-md-4">
-                                                <a href="#"><i class="fa fa-calendar fa-3x my-4" style="color: white;"></i></a>
+                                                <a href="#"><i class="fa-solid fa-calendar-check fa-3x my-4" style="color: white;"></i></a>
                                             </div>
                                         </div>
                                     </div>   
