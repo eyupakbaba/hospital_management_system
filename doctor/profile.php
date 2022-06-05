@@ -1,3 +1,8 @@
+<?php
+
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,6 +42,49 @@
                                         $row = mysqli_fetch_array($res);
 
                                     ?>
+
+                                    <form method="post">
+
+                                        <?php
+                                            echo "<img src = 'img/".$row['profile']."' style='height: 250px;' class='col-md-12 my-3'>";
+                                        ?>
+
+                                        <input type="file" name="img" class="form-control my-1">
+                                        <input type="submit" name = "upload" class="btn btn-success" value="Update Profile">
+
+                                    </form>
+                                    
+                                    <div class="my-3">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <th class="text-center">Details</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Firstname</td>
+                                                <td><?php echo $row['firstname']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Surname</td>
+                                                <td><?php echo $row['surname']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Username</td>
+                                                <td><?php echo $row['username']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td><?php echo $row['email']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone No</td>
+                                                <td><?php echo $row['phone']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gender</td>
+                                                <td><?php echo $row['gender']; ?></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h5 class="text-center my2">Change Username</h5>
