@@ -1,6 +1,8 @@
 <?php
 
     session_start();
+
+    //error_reporting(0);
 ?>
 
 <!DOCTYPE html>
@@ -41,9 +43,28 @@
 
                                         $row = mysqli_fetch_array($res);
 
+                                        if(isset($_POST['upload'])){
+
+                                            $img = $_FILES['img']['name'];
+
+                                            if(empty($img)){
+
+                                            }else{
+
+                                                $query = "UPDATE doctors SET profile = '$img' WHERE username = '$doc'" ;
+
+                                                $res = mysqli_query($connect,$query);
+
+                                                if($res){
+
+                                                    move_uploaded_file($_FILES['img']['tmp_name'], "img/$img");
+                                                }
+                                            }
+                                        }
+
                                     ?>
 
-                                    <form method="post">
+                                    <form method="post" enctype="multipart/form-data">
 
                                         <?php
                                             echo "<img src = 'img/".$row['profile']."' style='height: 250px;' class='col-md-12 my-3'>";
@@ -76,18 +97,47 @@
                                                 <td><?php echo $row['email']; ?></td>
                                             </tr>
                                             <tr>
-                                                <td>Phone No</td>
-                                                <td><?php echo $row['phone']; ?></td>
+                                                <td>Phone No.</td>
+                                                <td><?php echo "+".$row['phone'].""; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Gender</td>
                                                 <td><?php echo $row['gender']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Country</td>
+                                                <td><?php echo $row['country']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Salary</td>
+                                                <td><?php echo "$".$row['salary']."" ?></td>
                                             </tr>
                                         </table>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h5 class="text-center my2">Change Username</h5>
+
+                                    <?php
+                                        if(isset($_POST['change_uname'])){
+
+                                            $uname = $_POST['uname'];
+
+                                            if(empty($uname)){
+
+                                            }else{
+
+                                                $query = "UPDATE doctors SET username='$uname' WHERE username='$doc'";
+
+                                                $res = mysqli_query($connect,$query);
+
+                                                if($res){
+
+                                                    $_SESSION['doctor'] = $uname;
+                                                }
+                                            }
+                                        }
+                                    ?>
                                     <form method="post">
                                         <label>Change Username</label>
                                         <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username">
@@ -96,6 +146,34 @@
                                     </form>
                                     <br><br>
                                     <h5 class="text-center my-2">Change Password</h5>
+
+                                    <?php
+                                        if(isset($_POST['change_pass'])){
+                                            
+                                            $old = $_POST['old_pass'];
+                                            $new = $_POST['new_pass'];
+                                            $con = $_POST['con_pass'];
+
+                                            $ol = "SELECT * FROM doctors WHERE username='$doc'";
+
+                                            $ols = mysqli_query($connect,$ol);
+                                            $row = mysqli_fetch_array($ols); 
+
+                                            if($old != $row['password']){
+
+
+                                            }else if(empty($new)){
+
+                                            }else if($con != $new){
+
+                                            }else {
+                                                $query = "UPDATE doctors SET password='$new' WHERE username='$doc'";
+
+                                                mysqli_query($connect,$query);
+
+                                            }
+                                        }
+                                    ?>
                                     <form method="post">
                                         <div class="form-group">
                                             <label>Old Password</label>
