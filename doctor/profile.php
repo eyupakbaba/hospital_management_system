@@ -2,7 +2,7 @@
 
     session_start();
 
-    //error_reporting(0);
+    error_reporting(0);
 ?>
 
 <!DOCTYPE html>
@@ -148,7 +148,7 @@
                                     <h5 class="text-center my-2">Change Password</h5>
 
                                     <?php
-                                        if(isset($_POST['change_pass'])){
+                                        if($_POST['change_pass']){
                                             
                                             $old = $_POST['old_pass'];
                                             $new = $_POST['new_pass'];

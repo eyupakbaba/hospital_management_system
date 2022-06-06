@@ -66,8 +66,11 @@ if (isset($_POST['login'])) {
 	 		<div class="row">
 	 			<div class="col-md-3"></div>
 	 			<div class="col-md-6 jumbotron">
+				 	
+
 	 				<img src="images/admin7.png" height="200" width="200" style="margin-left: 150px;" class="col-md-6" >
-	 				<form method="post" class="my-3">
+	 				
+					 <form method="post" class="form-control my-3">
 
 	 					<div class="alert alert-danger">
 	 					
