@@ -2,6 +2,7 @@
 
     margin-left: -30px;
 
+    
     border: 0px outset #3c92c4;
     
     background-color: #3c92c4;
@@ -18,3 +19,46 @@
     margin-right: 0;
     font-weight: bold;
 }
+.col-md-3 {
+
+    height: 150px;
+
+}
+
+.fa-solid{
+
+    color: white;
+    border-radius: 0.2em;
+    padding: 0.2em;
+    
+}
+
+input[type=submit] {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+
+    
+  }
+  form {
+
+    width  : 800px;
+    height : 300px;
+    margin-bottom: 200px;
+    
+    box-sizing: border-box;
+   
+  }
+ 
