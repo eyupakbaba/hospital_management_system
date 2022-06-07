@@ -29,7 +29,7 @@
                             <input type="password" name="pass" class="form-control" autocomplete="off" placeholder="Enter Password">
                         </div>
                         <input type="submit" name="login" class="btn btn-info my-3" value="Login">
-                        <p><b>I do not have an account </b><a href="#">click here!</a></p>
+                        <p><b>I do not have an account </b><a href="account.php">click here!</a></p>
                     </form>
                 </div>
                 <div class="col-md-3"></div>

@@ -29,7 +29,7 @@
 
 				<h5 class="text-center">Create account so that we can take good care of you</h5>
  
-				<a href="#">
+				<a href="account.php">
 					<button class="btn btn-success my-3" style="margin-left: 30%;">Create Account</button>
 				</a>
 			</div>

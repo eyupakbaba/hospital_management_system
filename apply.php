@@ -76,7 +76,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Apply Now!!!</title>
 </head>
-<body style="background-image: url(images/3202988.jpg);background-size: cover;background-repeat: no-repeat;">
+<body style="background-image: url(images/back.jpg);background-size: cover;background-repeat: no-repeat;">
 	
 	<?php 
 		include("include/header.php");
