@@ -44,7 +44,7 @@
 
             if($res){
 
-                header("Location:patientlogin");
+                header("Location:patientlogin.php");
             }else{
                 echo "<script>alert('failed')</script>";
             }
@@ -71,10 +71,12 @@
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6 my-2 jumbotron">
-                    
-                    <h5 class="text-center text-info my-2">Create Account</h5>
 
                     <form method="post">
+
+                    <h5 class="text-center text-info my-2">Create Account</h5>
+
+                    
                         <div class="form-group">
                             <label for="">Firstname</label>
                             <input type="text" name="fname" class="form-control" autocomplete="off" placeholder="Enter Firstname">

@@ -51,6 +51,15 @@
 					';
 					
 				}
+				else if(isset($_SESSION['patient'])){
+					
+					$user = $_SESSION['patient']	;
+					
+					echo '
+					<li class="nav-item"><a href="#" class="nav-link text-white">'.$user.'</a></li>
+					<li class="nav-item"><a href="logout.php" class="nav-link text-white">log out</a></li>
+					';
+				}
 				else{
 					echo '
 					<li class="nav-item"><a href="index.php" class="nav-link text-white">Home</a><li>
