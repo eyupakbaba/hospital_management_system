@@ -40,7 +40,7 @@
                                                 <h5 class="text-white my-4">My Profile</h5>
                                             </div>
                                             <div class="col-md-4">
-                                                <a href="#"><i class="fa-solid fa-user-circle fa-3x my-4;"></i></a>
+                                                <a href="profile.php"><i class="fa-solid fa-user-circle fa-3x my-4;"></i></a>
                                             </div>
                                         </div>
                                     </div>
