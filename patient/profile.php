@@ -115,11 +115,81 @@
 
                                   <h5 class="text-center">Change Username</h5>
                                       
-                                      
+                                      <?php
+
+                                            if(isset($_POST['update'])){
+
+                                                $uname = $_POST['uname'];
+
+                                                if(empty($uname)){
+
+                                                }else{
+                                                    $query = "UPDATE patient SET username='$uname' WHERE username='$patient'";
+
+                                                    $res = mysqli_query($connect,$query);
+
+                                                    if($res){
+
+                                                        $_SESSION['patient'] = $uname;
+
+                                                    }
+                                                }
+                                            } 
+                                      ?>
                                   <form action="" method="post">
                                       <label for="">Enter Username</label>
                                       <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username">
                                       <input type="submit" name="update" class="btn btn-info my-2" value="Update Username">
+                                  </form>
+                                       
+                                      <?php
+                                            if(isset($_POST['change'])) {
+
+                                                $old = $_POST['old_pass'];
+                                                $new = $_POST['new_pass'];
+                                                $con = $_POST['con_pass'];
+
+                                                $q = "SELECT * FROM patient WHERE username='$patient'";
+
+                                                $re = mysqli_query($connect,$q);
+
+                                                $row = mysqli_fetch_array($re);
+
+                                                if(empty($old)){
+
+                                                    echo "<script>alert('Enter old password!')</script>";
+                                                }else if(empty($new)){
+
+                                                    echo "<script>alert('Enter new password!')</script>";
+                                                }else if($con != $new){
+
+                                                    echo "<script>alert('Both passwords do not match!')</script>";
+                                                
+                                                }else if($old != $row['password']){
+
+                                                    echo "<script>alert('Check the old password! Did you forget it?')</script>";
+                                                
+                                                }else{
+
+                                                    $query = "UPDATE patient SET password='$new' WHERE username='$patient'";
+
+                                                    mysqli_query($connect,$query);
+
+                                                }
+
+
+                                          }
+                                       ?>
+                                  <h5 class="my-4 text-center">Change Password</h5>
+                                  <form action="" method="post">
+                                      <label for="">Old Password</label>
+                                      <input type="password" name="old_pass" class="form-control" autocomplete="off" placeholder="Enter Old Password">
+                                      <label for="">New Password</label>
+                                      <input type="password" name="new_pass" class="form-control" autocomplete="off" placeholder="Enter New Password">
+                                      <label for="">Confirm Password</label>
+                                      <input type="password" name="con_pass" class="form-control" autocomplete="off" placeholder="Confirm Password">
+
+                                      <input type="submit" name="change" class="btn btn-info my-2" value="Change Password">
                                   </form>
                             </div>
                         </div>
