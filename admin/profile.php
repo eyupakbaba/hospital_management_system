@@ -15,7 +15,7 @@
 
         include("../include/connection.php");
 
-        // ?-/+*
+        
 
         $ad = $_SESSION['admin'];
 
@@ -46,11 +46,6 @@
                                 <h4>
                                     <?php 
                                         
-                                        //$username = isset($row['username']);
-
-                                        // new components 
-
-                                        // not valid 
                                         echo $username . " " ; 
                                     
                                     ?>PROFILE

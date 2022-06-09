@@ -102,7 +102,7 @@
                                 <div class="col-md-3">
                                     <div class="col-md-12 jumbotron bg-info my-5">
                                         <form action="" method="post" class="form-control">
-                                        <h5 id="report" class="text-center my-2">Send a Report</h5>
+                                        <h5 class="text-center my-2">Send a Report</h5>
                                         
                                             <label for="">Title</label>
                                             <input type="text" name="title" autocomplete="off" class="form-control" placeholder="Enter a Title of the Report">
