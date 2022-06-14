@@ -5,7 +5,7 @@
 
 	<link rel="stylesheet" href="index.css">
 </head>
-<body style="background-image: url(images/heart.jpg); background-repeat: no-repeat; background-size: cover;">
+<body class="Main">
 	<?php 
 		include("include/header.php");
 	?>

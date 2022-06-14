@@ -1,12 +1,3 @@
-#doc{
-
-    backface-visibility: visible;
-}
-
-#info{
-
-    
-}
 
 .button{
     
@@ -28,3 +19,8 @@
   }
 .button:hover {background-color:darkcyan;}
 
+.Main{
+    background-image: url(images/bck.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
