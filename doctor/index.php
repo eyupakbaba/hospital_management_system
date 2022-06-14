@@ -7,11 +7,14 @@
 <html>
 <head>
     <title>Doctor's Dashboard</title>
+
+    <link rel="stylesheet" href="doctor.css">
 </head>
-<body>
+<body class="Main">
 
     <?php
         include("../include/header.php");
+        include("../include/connection.php");
     ?>
 
     <div class="container-fluid">
@@ -43,13 +46,22 @@
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-8">
-                                                <h5 class="text-white my-2" style="font-size: 30px;">0</h5>
+                                                <?php
+
+                                                    $query = "SELECT * FROM patient";                                                    
+
+                                                    $p = mysqli_query($connect,$query);
+
+                                                    $pp = mysqli_num_rows($p);
+
+                                                ?>
+                                                <h5 class="text-white my-2" style="font-size: 30px;"><?php  echo $pp;   ?></h5>
                                                 <h5 class="text-white">Total</h5>
                                                 <h5 class="text-white">Patient</h5>
 
                                             </div>
                                             <div class="col-md-4">
-                                                <a href="#"><i class="fa-solid fa-bed-pulse fa-3x my-4" style="color: white;"></i></a>
+                                                <a href="patient.php"><i class="fa-solid fa-bed-pulse fa-3x my-4" style="color: white;"></i></a>
                                             </div>
                                         </div>
                                     </div>   

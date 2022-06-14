@@ -6,8 +6,10 @@ session_start();
 <html>
 <head>
     <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admin.css">
 </head>
-<body>
+<body class="Main">
     <?php
         
         include("../include/header.php");
@@ -26,7 +28,7 @@ session_start();
 
             </div>
             <div class="col-md-10">
-                <h4 class="my-2">Admin Dashboard</h4>
+                <h4 id="ttl" class="my-2">Admin Dashboard</h4>
                 <div class="col-md-12 my-1">
                     <div class="row">
                         <div class="col-md-3 bg-success mx-2" style="height: 130px;">
@@ -74,12 +76,18 @@ session_start();
                         <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <h5 class="my-2 text-white" style="font-size: 30px;">0</h5>    
+                                        <?php
+                                            $p = mysqli_query($connect,"SELECT * FROM patient");
+
+                                            $pp = mysqli_num_rows($p);
+
+                                        ?>
+                                        <h5 class="my-2 text-white" style="font-size: 30px;"><?php  echo $pp;     ?></h5>    
                                         <h5 class="text-white">Total</h5>
                                         <h5 class="text-white">Patients</h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#"><i class="fa-solid fa-bed-pulse fa-3x my-4" style="color:white;"></i></a>
+                                        <a href="patient.php"><i class="fa-solid fa-bed-pulse fa-3x my-4" style="color:white;"></i></a>
                                     </div>
                                 </div>
                             </div>

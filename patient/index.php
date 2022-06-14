@@ -8,8 +8,10 @@
     <title>Patient Dashboard</title>
 
     <link rel="stylesheet" href="patient.css">
+
 </head>
-<body>
+<body class="patientMain">
+
     <?php
         include("../include/header.php");
         include("../include/connection.php");

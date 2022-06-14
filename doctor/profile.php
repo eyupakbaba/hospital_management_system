@@ -10,6 +10,8 @@
 <head>
  
     <title>Doctors Profile Page</title>
+
+    <link rel="stylesheet" href="doctor.css">
 </head>
 <body>
     

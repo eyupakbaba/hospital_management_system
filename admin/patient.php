@@ -1,7 +1,15 @@
+<?php
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Total Patient</title>
+
+    <link rel="stylesheet" href="admin.css">
+
 </head>
 <body>
 
@@ -14,7 +22,7 @@
     <div class="container-fluid">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-2">
+                <div id=side class="col-md-2">
                     <?php
 
                         include("sidenav.php");
@@ -46,24 +54,25 @@
                                     <td>Gender</td>
                                     <td>Country</td>
                                     <td>Date Reg.</td>
+                                    <td id=action>Action</td>
                                 </tr>
 
                             
                             
-                            ";
-
-                            if(mysqli_num_rows($res) < 1){
-                                
-                                $output .= "
-                                <tr>
-                                    <td class='text-center' colspan='10'>No Patient Yet</td>
-                                </tr>
                                 ";
-                            } 
 
-                            while($row = mysqli_fetch_array($res)){ 
+                                if(mysqli_num_rows($res) < 1){
+                                    
+                                    $output .= "
+                                    <tr>
+                                        <td class='text-center' colspan='10'>No Patient Yet</td>
+                                    </tr>
+                                    ";
+                                } 
 
-                                $output .= "
+                                while($row = mysqli_fetch_array($res)){ 
+
+                                    $output .= "
 
                                     <tr>
                                         <td>".$row['id']."</td>
@@ -71,15 +80,25 @@
                                         <td>".$row['surname']."</td>
                                         <td>".$row['username']."</td>
                                         <td>".$row['email']."</td>
-                                        <td>".$row['phone']."</td>
+                                        <td>+".$row['phone']."</td>
                                         <td>".$row['gender']."</td>
                                         <td>".$row['country']."</td>
                                         <td>".$row['date_reg']."</td>
 
-                                
+                                        
+                                        <td>
+                                            <a href='view.php?id=".$row['id']."'><button class='btn btn-info'>View</button></a>
+                                                
+                                        </td>
+                                        
                                 ";
-                            }
+                                }
 
+                            $output .= "
+                                </tr>
+                            </table>";
+                            
+                            echo $output;
                             
                         
                         
