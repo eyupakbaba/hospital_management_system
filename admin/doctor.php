@@ -82,7 +82,7 @@
                                         <td>".$row['username']."</td>
                                         
                                         <td>".$row['gender']."</td>
-                                        <td>".$row['phone']."</td>
+                                        <td>+".$row['phone']."</td>
                                         <td>".$row['country']."</td>
                                         <td>".$row['salary']."</td>
                                         <td>".$row['data_reg']."</td>

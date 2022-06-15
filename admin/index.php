@@ -142,12 +142,23 @@ session_start();
                         <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <h5 class="my-2 text-white" style="font-size: 30px;">0</h5>    
+                                        <?php
+
+                                            $query = "SELECT sum(amount_paid) as profit FROM income";
+
+                                            $in = mysqli_query($connect,$query);
+
+                                            $row = mysqli_fetch_array($in);
+
+                                            $inc = $row['profit'];
+
+                                        ?>
+                                        <h5 class="my-2 text-white" style="font-size: 30px;"><?php echo "$$inc"; ?></h5>    
                                         <h5 class="text-white">Total</h5>
                                         <h5 class="text-white">Incomes</h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#"><i class="fa-solid fa-sack-dollar fa-3x my-4" style="color:white;"></i></a>
+                                        <a href="income.php"><i class="fa-solid fa-sack-dollar fa-3x my-4" style="color:white;"></i></a>
                                     </div>
                                 </div>
                             </div>

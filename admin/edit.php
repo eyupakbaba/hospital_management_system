@@ -58,7 +58,7 @@
                             <h5 class="my-3">Gender : <?php echo $row['gender']; ?></h5>
                             <h5 class="my-3">Country : <?php echo $row['country']; ?></h5>
                             <h5 class="my-3">Date Registered : <?php echo $row['data_reg']; ?></h5>
-                            <h5 class="my-3">Salary : <?php echo $row['salary']; ?></h5> 
+                            <h5 class="my-3">Salary : <?php echo $row['salary']."$"; ?></h5> 
                             
                         </div>
                         

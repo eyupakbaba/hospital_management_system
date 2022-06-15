@@ -16,9 +16,8 @@
                 <th>Firstname</th>
                 <th>Surname</th>
                 <th>Username</th>
-                
                 <th>Gender</th>
-                <th>Phone/th>
+                <th>Phone</th>
                 <th>Country</th>
                 <th>Date Registered</th>
                 <th>Action</th>
@@ -48,9 +47,8 @@
                 <td>".$row['firstname']."</td>
                 <td>".$row['surname']."</td>
                 <td>".$row['username']."</td>
-                
                 <td>".$row['gender']."</td>
-                <td>".$row['phone']."</td>
+                <td>+".$row['phone']."</td>
                 <td>".$row['country']."</td>
                 <td>".$row['data_reg']."</td>
                 <td>
