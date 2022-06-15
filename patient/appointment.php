@@ -8,6 +8,7 @@
     
     <title>Book Appointment</title>
 
+</head>
 <body>
     <?php
         include("../include/header.php");
