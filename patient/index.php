@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <div class="col-md-12">
             <div class="row">
-                <div id="side" class="col-md-2">
+                <div class="col-md-2" style="margin-left: -30px;">
 
                     <?php
                         include("sidenav.php");
@@ -55,7 +55,7 @@
                                                 <h5 class="text-white my-4">Book Appointment</h5>
                                             </div>
                                             <div class="col-md-4">
-                                                <a href="#"><i class="fa-solid fa-calendar-day fa-3x my-4;"></i></a>
+                                                <a href="appointment.php"><i class="fa-solid fa-calendar-day fa-3x my-4;"></i></a>
                                             </div>
                                         </div>
                                     </div>
