@@ -70,12 +70,19 @@
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-8">
-                                                <h5 class="text-white my-2" style="font-size: 30px;">0</h5>
+                                                    <?php
+                                                        $query = "SELECT * FROM appointment";
+
+                                                        $app = mysqli_query($connect,$query);
+
+                                                        $appoint = mysqli_num_rows($app);
+                                                    ?>
+                                                <h5 class="text-white my-2" style="font-size: 30px;"><?php echo $appoint; ?></h5>
                                                 <h5 class="text-white">Total</h5>
                                                 <h5 class="text-white my-4">Appointment</h5>
                                             </div>
                                             <div class="col-md-4">
-                                                <a href="#"><i class="fa-solid fa-calendar-check fa-3x my-4" style="color: white;"></i></a>
+                                                <a href="appointment.php"><i class="fa-solid fa-calendar-check fa-3x my-4" style="color: white;"></i></a>
                                             </div>
                                         </div>
                                     </div>   
